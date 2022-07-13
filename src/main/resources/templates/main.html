@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="manifest" href="/resources/assets/images/favicons/manifest.json">
+    <link rel="manifest" href="/resources/assets/images/favicons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/resources/assets/images/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Main stylesheet and color file-->
     <link href="/resources/assets/css/style.css" rel="stylesheet">
@@ -37,97 +40,70 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
+
+    <style>
+
+
+
+      body,.main{
+            padding-right: 0 !important;
+        }
+      .modal-open { padding-right: 0px !important; }
+      .modal { padding-right: 0px !important; }
+
+      @font-face {
+          font-family: 'ROKAFSansBold';
+          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts2201-3@1.0/ROKAFSansBold.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+      }
+
+      h2, h3, h4, a{
+          font-family: 'ROKAFSansBold',serif;
+      }
+      h1, h4{
+          color: white;
+      }
+
+    </style>
+
   </head>
+
+  <body  data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
   <th:block th:replace="fragment/head :: headFragment"></th:block>
-  <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
-
-
-      <section class="home-section home-full-height bg-dark bg-gradient" id="home">
+<div class="main">
+  <section class="home-section" id="home" data-background="/resources/assets/images/mainPhoto.jpg" style="margin-top: 90px; filter: brightness(40%); ">
         <div class="titan-caption">
           <div class="caption-content">
-            <div class="font-alt mb-30 titan-title-size-1"><h3>블랙박스 사고영상을 활용한</h3></div>
-            <div class="font-alt mb-40 titan-title-size-4">AI 과실비율 판단 서비스</div>
-            <!--<a class="section-scroll btn btn-border-w btn-round" data-toggle="modal" href="#loginModal">로그인</a>-->
-          </div>
+              <div class="module-medium">
+                  <h1>one-stop</h1>
+                  <h1>AI 과실비율 판단 서비스</h1>
+           <!--   <div class="row multi-columns-row" style="margin-top: 27%; padding: 0 10% 0 10%">
+                  <div class="col-md-4 col-sm-6 col-xs-8">
+                          <div class="content-box-image"><img src="/resources/assets/images/community3.png"/></div>
+                          <h4 style="margin-top:-23%;margin-left: 3%" class="module-title font-alt"><a href="community">커뮤니티</a></h4>
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-8">
+                          <div class="content-box-image"><img src="/resources/assets/images/upload3.png"/></div>
+                          <h4 style="margin-top:-23%;margin-left: 5%" class="module-title font-alt" ><a href="upload">  동영상업로드</a></h4>
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-8">
+                          <div class="content-box-image"><img src="/resources/assets/images/myPage3.png" /></div>
+                          <h4 style="margin-top:-21%;;margin-left: 5%" class="module-title font-alt"><a href="myList">마이페이지</a></h4>
+                  </div>-->
+
+              </div>
+              </div>
         </div>
-      </section>
+        </div>
+  </section>
 
-<!--      &lt;!&ndash;<section class="module">&ndash;&gt;
-      <div class="modal" id="modal-wrap">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-5 col-sm-offset-1 mb-sm-40">
-              <h4 class="font-alt">Login</h4>
-              <hr class="divider-w mb-10">
-              <form class="form">
-                <div class="form-group">
-                  <input class="form-control" id="username" type="text" name="username" placeholder="Username"/>
-                </div>
-                <div class="form-group">
-                  <input class="form-control" id="password" type="password" name="password" placeholder="Password"/>
-                </div>
-                <div class="form-group">
-                  <button type="button" class="btn btn-round btn-b">Login</button>
-                </div>
-                <div class="form-group"><a href=""></a></div>
-              </form>
-            </div>
-      </div>
-        </div>-->
+          </div>
+</section>
+        </div>
 
-        <ul class="nav">
-          <li>
-          <!--  <a data-toggle="modal" href="#loginModal">LOGIN</a>-->
-            <div class="modal fade"  id="loginModal" role="dialog">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">×</button>
-                    <h1 class="modal-title" >로그인</h1>
-                  </div>
-                  <div class="modal-body">
-                    <th:block th:replace="~{fragment/login :: setLogin(~{this::login} )}"></th:block>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-
-         <!-- <div class="member_login">
-            <form th:action="@{/auth/loginProc}" th:method="POST">
-              <div class="member_login_input">
-                <input type="text" name="username" placeholder="아이디" >
-              </div>
-
-              <div class="member_login_input">
-                <input type="password" name="password" placeholder="비밀번호">
-              </div>
-
-              <div class="member_login_btn">
-
-                <input type="submit" class="btn btn-secondary" id="btn-login" value="로그인">
-
-                <input type="button" class="btn btn-secondary" value="회원가입" onclick="location.href='/member/join'">
-
-              </div>
-
-              <div class="find_password">
-                <a href="/forgot-password">아이디 또는 비밀번호를 잊으셨나요?</a>
-              </div>
-
-              <div class="login_api">
-                <a href="https://kauth.kakao.com/oauth/authorize?client_id=d860d38c992ca8bf5f07dcc3fd5122b9&redirect_uri=http://localhost:9090/member/auth/kakao/callback&response_type=code"><img src="/image/kakao_login_button.png"></a>
-              </div>
-
-              <div class="login_api">
-                <a href="/oauth2/authorization/google"><img src="/image/google_login_button.png"></a>
-              </div>
-
-            </form>
-            </th:block>
-          </div>-->
-
+</div>
 
 
     <script src="/resources/assets/lib/jquery/dist/jquery.js"></script>

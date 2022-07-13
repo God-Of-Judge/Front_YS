@@ -27,7 +27,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
   <!-- Main stylesheet and color file-->
   <link href="/resources/assets/css/style.css" rel="stylesheet">
   <link id="color-scheme" href="/resources/assets/css/colors/default.css" rel="stylesheet">
@@ -39,85 +42,180 @@
 
 </head>
 
-<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
-<th:block th:replace="fragment/head :: headFragment"></th:block>
+<style>
+  .post{
+    background-color: white;
+    padding: 20px;
+  }
 
-      <main class="main">
+  a, h1, h2, h3, h4,p{
+    text-align: center;
+  }
+
+  body,.main{
+    padding-right: 0 !important;
+  }
+  .modal-open { padding-right: 0px !important; }
+  .modal { padding-right: 0px !important; }
+
+
+
+</style>
+
+<th:block th:replace="fragment/head :: headFragment"></th:block>
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+
+      <main class="main" style="background-color: #f9f9f9">
         <section class="module">
           <div class="container">
             <div class="row">
+<div>
+  <div class="row" style="background-color: #f9f9f9">
 
-        <section class="module-medium" id="contact">
-            <div class="row multi-columns-row post-columns">
-              <h2 class="module-title font-alt">커뮤니티</h2>
+  <section class="module-medium" id="contact">
+    <h1></h1>
+
+  </section>
+</div>
+  <h2 style="text-align: center; color: #0C3664;letter-spacing: 4px; font-size: 35px ">커뮤니티</h2>
+  <br>
+  <br>
+  <hr class="divider-w pt-20">
+  <div class="row" style="background-color: #f9f9f9">
+
+            <div class="row multi-columns-row post-columns" style="background-color: #f9f9f9">
               <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="post">
                     <div class="post-thumbnail"><!--<a class="video-pop-up" href="https://www.youtube.com/watch?v=TTxZj3DZiIM"><img src="/resources/assets/images/post-1.jpg" alt="Blog-post Thumbnail"/></a>-->
-                      <a href="write_view"><img src="/resources/assets/images/post-1.jpg" alt="Blog-post Thumbnail"/></a></div>
+                      <a href="write_view"><img src="/resources/assets/images/img/side_right_2.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">사거리사고</a></h2>
-                    <h2 class="post-title"><a href="#">과실비율 80 : 20</a></h2>
-                    <div class="post-meta"><a href="#"></a> 작성일자 : 2020.09.10</div>
+                    <h2 class="post-title"><p>사거리사고</p></h2>
+                    <h2 class="post-title"><p>과실비율 80 : 20</p></h2>
                   </div>
                   <div class="post-entry">
-                    <p>동현님</p>
-                    <p></p>
+                    <p>동현님  </p>
+                    <p style="color:gray; text-align: center"> | 2020.09.10 | </p>
+
                   </div>
                 </div>
               </div>
 
               <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="post">
-                  <div class="post-thumbnail"><a href="#"><img src="/resources/assets/images/post-1.jpg"  alt="Blog-post Thumbnail"/></a></div>
+                  <div class="post-thumbnail"><a href="#"><img src="/resources/assets/images/img/acc1.jpg"  alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">사거리사고</a></h2>
-                    <h2 class="post-title"><a href="#">과실비율 80 : 20</a></h2>
-                    <div class="post-meta"><a href="#"></a> 작성일자 : 2020.09.10</div>
+                    <h2 class="post-title"><p>사거리사고</p></h2>
+                    <h2 class="post-title"><p>과실비율 80 : 20</p></h2>
                   </div>
                   <div class="post-entry">
                     <p>동현님</p>
-                    <p></p>
+                    <p style="color:gray; text-align: center"> | 2020.09.10 | </p>
                   </div>
                 </div>
               </div>
 
               <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="post">
-                  <div class="post-thumbnail"><a href="#"><img src="/resources/assets/images/post-1.jpg" alt="Blog-post Thumbnail"/></a></div>
+                  <div class="post-thumbnail"><a href="#"><img src="/resources/assets/images/img/side_left_1.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">사거리사고</a></h2>
-                    <h2 class="post-title"><a href="#">과실비율 80 : 20</a></h2>
-                    <div class="post-meta"><a href="#"></a> 작성일자 : 2020.09.10</div>
+                    <h2 class="post-title"><p>사거리사고</p></h2>
+                    <h2 class="post-title"><p>과실비율 70 : 30</p></h2>
                   </div>
                   <div class="post-entry">
                     <p>동현님</p>
-                    <p></p>
+                    <p style="color:gray; text-align: center"> | 2020.09.10 | </p>
                   </div>
                 </div>
               </div>
 
               <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="post">
-                  <div class="post-thumbnail"><a href="#"><img src="/resources/assets/images/post-1.jpg" alt="Blog-post Thumbnail"/></a></div>
+                  <div class="post-thumbnail"><a href="#"><img src="/resources/assets/images/img/side_left_6.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">사거리사고</a></h2>
-                    <h2 class="post-title"><a href="#">과실비율 80 : 20</a></h2>
-                    <div class="post-meta"><a href="#"></a> 작성일자 : 2020.09.10</div>
+                    <h2 class="post-title"><p>사거리사고</p></h2>
+                    <h2 class="post-title"><p>과실비율 60 : 40</p></h2>
                   </div>
                   <div class="post-entry">
                     <p>동현님</p>
-                    <p></p>
+                    <p style="color:gray; text-align: center"> | 2020.09.10 | </p>
                   </div>
                 </div>
               </div>
-            <div class="pagination font-alt" style="text-align: center"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
-          </div>
-        </section>
             </div>
+
+  <div class="row multi-columns-row post-columns" style="background-color: #f9f9f9">
+    <div class="col-sm-6 col-md-3 col-lg-3">
+      <div class="post">
+        <div class="post-thumbnail"><!--<a class="video-pop-up" href="https://www.youtube.com/watch?v=TTxZj3DZiIM"><img src="/resources/assets/images/post-1.jpg" alt="Blog-post Thumbnail"/></a>-->
+          <a href="write_view"><img src="/resources/assets/images/img/side_right_14.jpg" alt="Blog-post Thumbnail"/></a></div>
+        <div class="post-header font-alt">
+          <h2 class="post-title"><p>사거리사고</p></h2>
+          <h2 class="post-title"><p>과실비율 80 : 20</a></h2>
         </div>
+        <div class="post-entry">
+          <p>동현님</p>
+          <p style="color:gray; text-align: center"> | 2020.09.10 | </p>
+        </div>
+      </div>
+    </div>
 
-    </main>
-<th:block th:replace="fragment/footer :: footerFragment"></th:block>
+    <div class="col-sm-6 col-md-3 col-lg-3">
+      <div class="post">
+        <div class="post-thumbnail"><a href="#"><img src="/resources/assets/images/img/acc3.jpg"  alt="Blog-post Thumbnail"/></a></div>
+        <div class="post-header font-alt">
+          <h2 class="post-title"><p>사거리사고</p></h2>
+          <h2 class="post-title"><p>과실비율 80 : 20</p></h2>
+        </div>
+        <div class="post-entry">
+          <p>동현님</p>
+          <p style="color:gray; text-align: center"> | 2020.09.10 | </p>
+        </div>
+      </div>
+    </div>
 
+    <div class="col-sm-6 col-md-3 col-lg-3">
+      <div class="post">
+        <div class="post-thumbnail"><a href="#"><img src="/resources/assets/images/img/side_left_8.jpg" alt="Blog-post Thumbnail"/></a></div>
+        <div class="post-header font-alt">
+          <h2 class="post-title"><p>사거리사고</p></h2>
+          <h2 class="post-title"><p>과실비율 80 : 20</p></h2>
+        </div>
+        <div class="post-entry">
+
+          <p>동현님</p>
+          <p style="color:gray; text-align: center"> | 2020.09.10 | </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-3 col-lg-3">
+      <div class="post">
+        <div class="post-thumbnail"><a href="#"><img src="/resources/assets/images/img/side_left_10.jpg" alt="Blog-post Thumbnail"/></a></div>
+        <div class="post-header font-alt">
+          <h2 class="post-title"><p>사거리사고</p></h2>
+          <h2 class="post-title"><p>과실비율 80 : 20</p></h2>
+        </div>
+        <div class="post-entry">
+
+          <p>동현님</p>
+          <p style="color:gray; text-align: center"> | 2020.09.10 | </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align: center">
+    <hr class="divider-w">
+    <div class="pagination font-alt"><a href="#"><</a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#"> > </a></div>
+  </div>
+</div>
+
+
+
+
+</div>
+</div>
+            </div>
+        </section>
+      </main>
   </body>
 </html>

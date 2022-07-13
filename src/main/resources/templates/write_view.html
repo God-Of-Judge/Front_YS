@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--    Document Title    -->
-    <!--     Favicons   -->
-
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/resources/assets/images/favicons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/resources/assets/images/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <!--    Stylesheets    -->
 
+    <!-- Default stylesheets-->
     <link href="/resources/assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Template specific stylesheets-->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
@@ -27,10 +24,23 @@
     <link href="/resources/assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
     <link href="/resources/assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
     <link href="/resources/assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <!-- Main stylesheet and color file-->
     <link href="/resources/assets/css/style.css" rel="stylesheet">
     <link id="color-scheme" href="/resources/assets/css/colors/default.css" rel="stylesheet">
-  </head>
+
+    <!-- 모달 라이브러리 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
 
   <style>
     #form-commentInfo{
@@ -104,101 +114,140 @@
       color: aliceblue;
     }
 
+    .video-container {
+        position: relative;
+    }
 
-  </style>
+    module-medium{
+        margin-top: 50px;
+    }
 
-  <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+    textarea{
+        resize: none;
+    }
 
-    <main class="main">
+    body,.main{
+        padding-right: 0 !important;
+    }
+    .modal-open { padding-right: 0px !important; }
+    .modal { padding-right: 0px !important; }
 
 
-      <th:block th:replace="fragment/head :: headFragment"></th:block>
-      <main class="main">
+    pre{
+        height: 500px;
+    }
 
-        <section class="module">
+    .container{
+        padding: 0 !important;
+    }
+
+    .comment-author a,a{
+        color: black;
+        font-family: "Roboto Condensed", sans-serif;
+    }
+
+</style>
+
+
+  <th:block th:replace="fragment/head :: headFragment"></th:block>
+  <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60" style="background-color: #f9f9f9">
+
+  <main class="main" style="background-color: #f9f9f9">
+      <section class="module">
           <div class="container">
-            <div class="row">
-              <!--<div class="col-sm-8 col-sm-offset-2">-->
-                <section class="module-medium" id="contact">
-                <h1 class="module-title font-alt mb-0">제목</h1>
-                <h1></h1>
-                <hr class="divider-w mt-10 mb-20">
-                <form class="form" role="form">
+              <div class="row">
+                  <div>
+                      <div class="row" >
 
+                          <section class="module-medium" id="contact">
+                              <h1></h1>
+
+                          </section>
+                      </div>
+                      <h2 style="text-align: center; color: #0C3664;letter-spacing: 4px; font-size: 35px ">게시물보기</h2>
+                      <br>
+                      <br>
+                      <hr class="divider-w pt-20">
+                      <h3>교통사고 질문드립니다. </h3>
+                      <br class="divider-w mt-10 mb-20">
+                      <p style="color:gray; text-align: right"> 동현님 &nbsp;&nbsp;&nbsp;  | 2020.09.10 | </p>
+                      <hr class="divider-w mt-10 mb-20">
+                <form class="form" role="form">
                   <div class="form-group">
-                    <div class="col-sm-12">
-                      <section class="module bg-dark-60" data-background="/resources/assets/images/section-6.jpg">
                      <!-- <div class="video-box-icon"><a class="video-pop-up" href="https://www.youtube.com/watch?v=TTxZj3DZiIM"><span class="icon-video"></span></a></div>-->
-                      <div class="post-thumbnail"><img src="assets/images/post-4.jpg" alt="Blog Featured Image"/></div>
-                      <div class="video-title font-alt">Presentation</div>
-                      <div class="video-subtitle font-alt">Watch the video about our new products</div>
-                      </section>
+                            <video width="100%" controls><source  src="/resources/assets/images/accident.mp4" type="video/mp4">
+                          이 브라우저에서 지원하지 않는 영상입니다.
+                      </video>
                     </div>
-                    </div>
-                  <textarea class="form-control" rows="30" placeholder="내용"></textarea>
+                </form>
+                  <pre style="font-size: 20px"> 오늘 사고가 났습니다.</pre>
                   <p></p>
                   <div class="comments">
                       <div class="container">
                         <div class="row">
                                 <h4 class="comment-title font-alt">댓글</h4>
                     <div class="comment clearfix">
-                      <div class="comment-avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/ryanbattles/128.jpg" alt="avatar"/></div>
+                      <div class="comment-avatar">  <div class="comment-author font-alt"><a>동현</a></div></div>
                       <div class="comment-content clearfix">
-                        <div class="comment-author font-alt"><a href="#">John Doe</a></div>
+
                         <div class="comment-body">
-                          <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The European languages are members of the same family. Their separate existence is a myth.</p>
+                          <p>무섭네요...</p>
                         </div>
-                        <div class="comment-meta font-alt">Today, 14:55 - <a href="#">Reply</a>
+                        <div class="comment-meta font-alt">Today, 14:55 - <a class="font-alt" href="#">Reply</a>
                         </div>
                       </div>
                       <div class="comment clearfix">
-                        <div class="comment-avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/draganbabic/128.jpg" alt="avatar"/></div>
+                        <div class="comment-avatar">  <div class="comment-author font-alt"><a>영광</a></div></div>
                         <div class="comment-content clearfix">
-                          <div class="comment-author font-alt"><a href="#">Mark Stone</a></div>
+
                           <div class="comment-body">
-                            <p>Europe uses the same vocabulary. The European languages are members of the same family. Their separate existence is a myth.</p>
+                            <p>그러게요. 운전을 하시면 안될 것 같은데...</p>
                           </div>
-                          <div class="comment-meta font-alt">Today, 15:34 - <a href="#">Reply</a>
+                          <div class="comment-meta font-alt">Today, 15:34 - <a class="font-alt"  href="#">Reply</a>
                           </div>
                         </div>
                       </div>
                     </div>
+
                     <div class="comment clearfix">
-                      <div class="comment-avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/pixeliris/128.jpg" alt="avatar"/></div>
+                      <div class="comment-avatar"> <div class="comment-author font-alt"><a href="#">우철</a></div></div>
                       <div class="comment-content clearfix">
-                        <div class="comment-author font-alt"><a href="#">Andy</a></div>
                         <div class="comment-body">
-                          <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The European languages are members of the same family. Their separate existence is a myth.</p>
+                          <p>대단하다....</p>
                         </div>
-                        <div class="comment-meta font-alt">Today, 14:59 - <a href="#">Reply</a>
+                        <div class="comment-meta font-alt">Today, 14:59 - <a class="font-alt"  href="#">Reply</a>
                         </div>
                       </div>
                     </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="comment" name="comment" rows="4" placeholder="Comment"></textarea>
+                            </div>
+                            <button class="btn btn-round btn-d" type="submit">작성</button>
+                            <p></p>
+                            <p></p>
                   </div>
-                          <div class="comment-form">
-                              <form method="post">
-                                  <div class="form-group">
-                                      <textarea class="form-control" id="comment" name="comment" rows="4" placeholder="Comment"></textarea>
-                                  </div>
-                                  <button class="btn btn-round btn-d" type="submit">작성</button>
-                              </form>
+
                 </form>
             </div>
+
+
+                  </div>
+
+
+
+          </div>
+    </div>
+
+                  </div>
               </div>
-            </div>
-          </div>
-          </div>
-        </section>
-
-
-
-
-
-        </div>
-            </div>
+          <div style="text-align: center">
+              <button class="btn btn-b btn-round" type="submit"  style=" width: 200px;height: 50px"><a class="font-alt" href="write" style="color: white;font-size: 20px">돌아가기</a></button>&nbsp
           </div>
 
+      </section>
 
+
+  </main>
 
 
 
@@ -250,14 +299,10 @@
     console.dir(rootDiv);
 
   }
-  출처: https://avengersrhydon1121.tistory.com/65 [익명의 개발노트:티스토리]
 
 </script>
 
-    <!--
-    JavaScripts
-    =============================================
-    -->
+    <!--    JavaScripts    -->
     <script src="/resources/assets/lib/jquery/dist/jquery.js"></script>
     <script src="/resources/assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/resources/assets/lib/wow/dist/wow.js"></script>
