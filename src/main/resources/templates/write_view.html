@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<html lang="en-US" dir="ltr" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -104,47 +104,58 @@
       color: aliceblue;
     }
 
+    .video-container {
+        position: relative;
+    }
+
+    module-medium{
+        margin-top: 50px;
+    }
+
+    textarea{
+        resize: none;
+    }
+
 
   </style>
-
+  <th:block th:replace="fragment/head :: headFragment"></th:block>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
 
-    <main class="main">
-
-
-      <th:block th:replace="fragment/head :: headFragment"></th:block>
-      <main class="main">
-
+    <div class="main">
         <section class="module">
           <div class="container">
-            <div class="row">
-              <!--<div class="col-sm-8 col-sm-offset-2">-->
-                <section class="module-medium" id="contact">
-                <h1 class="module-title font-alt mb-0">제목</h1>
-                <h1></h1>
-                <hr class="divider-w mt-10 mb-20">
-                <form class="form" role="form">
+          <div class="row">
 
+          </div>
+            <div class="row">
+
+                        <section class="module-medium" id="contact">
+                            <h1></h1>
+
+                        </section>
+            </div>
+              <h2>제목</h2>
+              <hr class="divider-w mt-10 mb-20">
+                <form class="form" role="form">
                   <div class="form-group">
-                    <div class="col-sm-12">
-                      <section class="module bg-dark-60" data-background="/resources/assets/images/section-6.jpg">
                      <!-- <div class="video-box-icon"><a class="video-pop-up" href="https://www.youtube.com/watch?v=TTxZj3DZiIM"><span class="icon-video"></span></a></div>-->
-                      <div class="post-thumbnail"><img src="assets/images/post-4.jpg" alt="Blog Featured Image"/></div>
-                      <div class="video-title font-alt">Presentation</div>
-                      <div class="video-subtitle font-alt">Watch the video about our new products</div>
-                      </section>
+                            <video width="100%" controls><source  src="/resources/assets/images/cat.mp4" type="video/mp4">
+                          이 브라우저에서 지원하지 않는 영상입니다.
+                      </video>
                     </div>
-                    </div>
-                  <textarea class="form-control" rows="30" placeholder="내용"></textarea>
+                </form>
+    <div class="row">
+        <div class="container">
+                  <textarea readonly class="form-control" rows="30" placeholder="내용"></textarea>
                   <p></p>
                   <div class="comments">
                       <div class="container">
                         <div class="row">
                                 <h4 class="comment-title font-alt">댓글</h4>
                     <div class="comment clearfix">
-                      <div class="comment-avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/ryanbattles/128.jpg" alt="avatar"/></div>
+                      <div class="comment-avatar">  <div class="comment-author font-alt"><a>John Doe</a></div></div>
                       <div class="comment-content clearfix">
-                        <div class="comment-author font-alt"><a href="#">John Doe</a></div>
+
                         <div class="comment-body">
                           <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The European languages are members of the same family. Their separate existence is a myth.</p>
                         </div>
@@ -152,9 +163,9 @@
                         </div>
                       </div>
                       <div class="comment clearfix">
-                        <div class="comment-avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/draganbabic/128.jpg" alt="avatar"/></div>
+                        <div class="comment-avatar">  <div class="comment-author font-alt"><a>Mark Stone</a></div></div>
                         <div class="comment-content clearfix">
-                          <div class="comment-author font-alt"><a href="#">Mark Stone</a></div>
+
                           <div class="comment-body">
                             <p>Europe uses the same vocabulary. The European languages are members of the same family. Their separate existence is a myth.</p>
                           </div>
@@ -163,10 +174,10 @@
                         </div>
                       </div>
                     </div>
+
                     <div class="comment clearfix">
-                      <div class="comment-avatar"><img src="https://s3.amazonaws.com/uifaces/faces/twitter/pixeliris/128.jpg" alt="avatar"/></div>
+                      <div class="comment-avatar"> <div class="comment-author font-alt"><a href="#">Andy</a></div></div>
                       <div class="comment-content clearfix">
-                        <div class="comment-author font-alt"><a href="#">Andy</a></div>
                         <div class="comment-body">
                           <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The European languages are members of the same family. Their separate existence is a myth.</p>
                         </div>
@@ -174,30 +185,29 @@
                         </div>
                       </div>
                     </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="comment" name="comment" rows="4" placeholder="Comment"></textarea>
+                            </div>
+                            <button class="btn btn-round btn-d" type="submit">작성</button>
                   </div>
-                          <div class="comment-form">
-                              <form method="post">
-                                  <div class="form-group">
-                                      <textarea class="form-control" id="comment" name="comment" rows="4" placeholder="Comment"></textarea>
-                                  </div>
-                                  <button class="btn btn-round btn-d" type="submit">작성</button>
-                              </form>
+
+
                 </form>
             </div>
               </div>
             </div>
+    </div>
+                        </section>
           </div>
-          </div>
-        </section>
 
 
 
 
 
-        </div>
             </div>
-          </div>
-
+        </section>
+    </div>
+    </div>
 
 
 
@@ -250,14 +260,10 @@
     console.dir(rootDiv);
 
   }
-  출처: https://avengersrhydon1121.tistory.com/65 [익명의 개발노트:티스토리]
 
 </script>
 
-    <!--
-    JavaScripts
-    =============================================
-    -->
+    <!--    JavaScripts    -->
     <script src="/resources/assets/lib/jquery/dist/jquery.js"></script>
     <script src="/resources/assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/resources/assets/lib/wow/dist/wow.js"></script>

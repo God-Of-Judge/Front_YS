@@ -27,6 +27,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <!-- Main stylesheet and color file-->
   <link href="/resources/assets/css/style.css" rel="stylesheet">
@@ -39,17 +42,39 @@
 
 </head>
 
-<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+<style>
+  body{
+    font-size: 11px;
+    font: 400 12px/1.8 "Open Sans", sans-serif;
+  }
+
+  .post{
+    background-color: white;
+    padding: 20px;
+  }
+
+</style>
+
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60" style="background-color: #f9f9f9">
 <th:block th:replace="fragment/head :: headFragment"></th:block>
 
       <main class="main">
-        <section class="module">
+        <section class="module" style="background-color: #f9f9f9">
           <div class="container">
             <div class="row">
+<div>
+  <div class="row" style="background-color: #f9f9f9">
 
-        <section class="module-medium" id="contact">
-            <div class="row multi-columns-row post-columns">
-              <h2 class="module-title font-alt">커뮤니티</h2>
+  <section class="module-medium" id="contact">
+    <h1></h1>
+
+  </section>
+</div>
+  <h2 class="module-title font-alt" style="background-color: #f9f9f9">커뮤니티</h2>
+  <hr class="divider-w pt-20">
+  <div class="row" style="background-color: #f9f9f9">
+
+            <div class="row multi-columns-row post-columns" style="background-color: #f9f9f9">
               <div class="col-sm-6 col-md-3 col-lg-3">
                 <div class="post">
                     <div class="post-thumbnail"><!--<a class="video-pop-up" href="https://www.youtube.com/watch?v=TTxZj3DZiIM"><img src="/resources/assets/images/post-1.jpg" alt="Blog-post Thumbnail"/></a>-->
@@ -110,14 +135,16 @@
                   </div>
                 </div>
               </div>
-            <div class="pagination font-alt" style="text-align: center"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
-          </div>
-        </section>
             </div>
-        </div>
-
-    </main>
-<th:block th:replace="fragment/footer :: footerFragment"></th:block>
-
+              <div style="text-align: center">
+                <hr class="divider-w">
+                <div class="pagination font-alt"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
+              </div>
+            </div>
+</div>
+</div>
+            </div>
+        </section>
+      </main>
   </body>
 </html>

@@ -33,17 +33,36 @@
     <link href="/resources/assets/css/style.css" rel="stylesheet">
     <link id="color-scheme" href="/resources/assets/css/colors/default.css" rel="stylesheet">
 
-    <!-- 모달 라이브러리 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 </head>
-<style>
 
-    .util_wrap { position:absolute; top:0px; right:0px; background-color:#e9e9e9; border:1px solid#aaaaaa; padding:3px 10px 3px 10px; }
+<style>
+        /* modal position(center)*/
+    .modal {
+        text-align: center;
+    }
+    @media screen and (min-width: 768px) {
+        .modal:before {
+            display: inline-block;
+            vertical-align: middle;
+            content: " ";
+            height: 100%;
+        }
+    }
+    .modal-dialog {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+        .navbar-fixed-bottom, .navbar-fixed-top{
+            padding-top: 50px;
+        }
+
 
 </style>
+
 <th:block th:fragment="headFragment">
 
   <!--  <body class="homepage is-preload">
@@ -51,37 +70,11 @@
     <nav class="navbar navbar-custom navbar-transparent navbar-fixed-top one-page" role="navigation">
         <div class="container">
 
-           <!-- <div class="nav navbar-nav navbar-right">
-                <ul>
-                    <li><a class="section-scroll" data-toggle="modal" href="#loginModal">로그인</a></li>
-                    <li class="hidden"><a class="dropdown-toggle" data-toggle="dropdown">로그아웃</a></li>
-                    <li><a href="join_edit" class="hidden" >아이디/비밀번호찾기</a></li>
-                    <li><a href="join" >회원가입</a></li>
-                </ul>
-            </div>-->
-            <div class="collapse navbar-collapse">
-            <div class="util_wrap">
-                <h2 class="hidden">Util Menu</h2>
-                <ul  class="nav navbar-nav navbar-right">
-
-                    <li><a class="util_a" data-toggle="modal" href="#loginModal">로그인</a></li>
-                    <li ><a id="register" class="util_a" href="join">회원가입</a></li>
-                    <li class="hidden"><a href="" >로그아웃</a></li>
-                    <li ><a href="join_edit"class="util_a">아이디/비밀번호찾기</a></li>
-
-                </ul>
-
-
-            </div>
-
-            </div>
-
-            <div class="collapse navbar-collapse" id="custom-collapse">
-                <div class="navbar-header">
+               <div class="collapse navbar-collapse" id="custom-collapse" style="margin-top: 10px; margin-bottom: 20px">
+            <div class="navbar-header">
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="main">판별의 신</a>
             </div>
                 <ul class="nav navbar-nav navbar-right">
-
                     <li><a href="service">서비스</a></li>
                     <li><a href="upload">영상업로드</a></li>
                     <li><a href="community">커뮤니티</a></li>
@@ -91,11 +84,34 @@
                             <li><a href="join_edit">회원정보수정</a></li>
                         </ul>
                     </li>
+                    <li><a data-toggle="modal" href="#loginModal"> | 로그인</a></li>
+                    <li class="hidden"><a > | 로그아웃</a></li>
                 </ul>
-            </div>
+        </div>
         </div>
     </nav>
-
+    </div>
+    </div>
+    <ul class="nav">
+        <li>
+            <!--  <a data-toggle="modal" href="#loginModal">LOGIN</a>-->
+            <div class="modal modal-center fade" id="loginModal" >
+                <div class="modal-center">
+                    <div>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">×</button>
+                                <h1 class="modal-title" >로그인</h1>
+                            </div>
+                            <div class="modal-body">
+                                <th:block th:replace="~{fragment/login :: setLogin(~{this::login} )}"></th:block>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
 
         <script src="/resources/vendors/polyfill.min.js"></script>
         <script src="/resources/vendors/jquery.min.js"></script>

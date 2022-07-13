@@ -3,9 +3,7 @@
 
 
 <style>
-  h2 {
-    text-align: center;
-  }
+
 
   .p {
     text-align: center;
@@ -20,6 +18,7 @@
   <body>
   <div class="member_login">
     <form th:action="@{/auth/loginProc}" th:method="POST">
+
       <div class="member_login_input">
         <input type="text" name="username" placeholder="아이디" >
       </div>
@@ -29,14 +28,8 @@
       </div>
 
       <div class="member_login_btn">
-
         <input type="submit" class="btn btn-secondary" id="btn-login" value="로그인">
-
-        <a>| 회원가입</a>
-      </div>
-
-      <div class="find_password">
-        <a href="/forgot-password">아이디 또는 비밀번호를 잊으셨나요?</a>
+        <a href="join"> | 회원가입</a>
       </div>
 
       <div class="login_api">
@@ -46,22 +39,8 @@
     </form>
   </div>
 
-  </body>
 
-  <script src="/resources/assets/lib/jquery/dist/jquery.js"></script>
-  <script src="/resources/assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="/resources/assets/lib/wow/dist/wow.js"></script>
-  <script src="/resources/assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
-  <script src="/resources/assets/lib/isotope/dist/isotope.pkgd.js"></script>
-  <script src="/resources/assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
-  <script src="/resources/assets/lib/flexslider/jquery.flexslider.js"></script>
-  <script src="/resources/assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
-  <!--<script src="/resources/assets/lib/smoothscroll.js"></script>-->
-  <script src="/resources/assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
-  <script src="/resources/assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
-  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDK2Axt8xiFYMBMDwwG1XzBQvEbYpzCvFU"></script>
-  <script src="/resources/assets/js/plugins.js"></script>
-  <script src="/resources/assets/js/main.js"></script>
+  </body>
 </th:block>
 
 </html>

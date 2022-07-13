@@ -8,7 +8,7 @@
     <!--    Document Title    -->
     <!--     Favicons   -->
 
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/resources/assets/images/favicons/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/resources/assets/images/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -27,6 +27,9 @@
     <link href="/resources/assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
     <link href="/resources/assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
     <link href="/resources/assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Main stylesheet and color file-->
     <link href="/resources/assets/css/style.css" rel="stylesheet">
     <link id="color-scheme" href="/resources/assets/css/colors/default.css" rel="stylesheet">
@@ -36,17 +39,22 @@
 
 <th:block th:replace="fragment/head :: headFragment"></th:block>
 
-
 <div class="main">
     <section class="module">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <h1 class="module-title font-alt">마이게시판</h1>
-                </div>
+
             </div>
-            <hr class="divider-w pt-20">
             <div class="row">
+
+                <section class="module-medium" id="contact">
+                    <h1></h1>
+
+                </section>
+            </div>
+            <h2 class="module-title font-alt">마이게시판</h2>
+            <hr class="divider-w pt-20">
+
                 <div class="col-sm-12">
                     <table class="table table-striped table-border checkout-table">
                         <tbody>
@@ -93,7 +101,7 @@
                                 <h5 class="product-title font-alt">2022.09.11</h5>
                             </td>
                             <td>
-                                <h5 class="product-title font-alt">£20.00</h5>
+                                <a href="result"><h5 class="product-title font-alt">분석완료</h5></a>
                             </td>
                             <td class="pr-remove"><a href="#" title="Remove"><i class="fa fa-times"></i></a></td>
                         </tr>
@@ -163,30 +171,19 @@
                 </div>
             </div>
 
+            <div style="text-align: center">
             <hr class="divider-w">
-            <div class="pagination font-alt" style="text-align: center"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
-
+            <div class="pagination font-alt"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
+            </div>
         </div>
     </section>
 
-    <hr class="divider-d">
-    <footer class="footer bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <p class="copyright font-alt">&copy; 2022&nbsp;<a href="index.html">판별의 AI</a><a style="font-size: 1px">ㄴ</a></p>
-                </div>
-                <div class="col-sm-6">
-                    <div class="footer-social-links"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+
 </div>
+
 <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
 
-
+<th:block th:replace="fragment/footer :: footerFragment"></th:block>
 </body>
 
 
