@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -129,20 +130,15 @@
 
 <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60" style="background-color: #f9f9f9">
 
-<main class="main" style="background-color: #f9f9f9">
+<div class="main" style="background-color: #f9f9f9">
     <section class="module">
         <div class="container">
             <div class="row">
-                <div>
-                    <div class="row">
-
-                        <section class="module-medium" id="contact">
-                            <h1></h1>
-
-                        </section>
-                    </div>
-                    <h2  class="Services" style="text-align: center; color: #0C3664;letter-spacing: 4px; font-size: 35px ">업로드</h2>
-                    <br>
+            </div>
+            <section class="module-medium" id="contact">
+                <h1></h1>
+            </section>
+            <h2 style="text-align: center; color: black;letter-spacing: 4px; font-size: 40px ">업로드</h2>
                     <br>
                     <hr class="divider-w pt-20">
                     <div class="row" >
@@ -163,6 +159,14 @@
                                 <th colspan="2" style="font-size: 30px"> 사고시점 입력</th>
                             </tr>
                             <tr>
+                                <td>
+                                    <div class="btn_slct_area">
+                                        <input type="hidden" name="locWantKey" id="locWantKey">
+                                        <input type="hidden" name="locWant" id="locWant">
+                                    </div>
+                                </td>
+                                <div class="normal_pop_wrap want_loc hidden">
+                                </div>
                                 <td><input class="time" type="time" style="margin-left: 200px" step="1"/><a class="font-alt"> ~ </a> <input class="time" type="time" step="1"/></td>
                                 <td>영상전체&nbsp;&nbsp;<input type="checkbox" ></td>
                             </tr>
@@ -217,7 +221,7 @@
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
 
-
+<script type="text/javascript" th:src="${@versionComponent.getVersion('/resources/build/time.bundle.js')}"></script>
 
 <!--
 

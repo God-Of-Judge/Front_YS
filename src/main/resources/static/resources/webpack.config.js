@@ -14,6 +14,7 @@ module.exports = {
 
         ],
         sample: path.join(context, '/js/sample/sample.js'),
+        time: path.join(context, '/js/time/time.js'),
     },
     devtool: 'eval',//inline-source-map, eval
     devServer: {

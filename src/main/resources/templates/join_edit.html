@@ -133,6 +133,11 @@
     .modal-open { padding-right: 0px !important; }
     .modal { padding-right: 0px !important; }
 
+    tr td{
+        font-size: 20px;
+        margin: 10px 0 10px 0 ;
+    }
+
 
 </style>
 
@@ -140,20 +145,31 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+
+<body class="body" data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+
+
 <th:block th:replace="fragment/head :: headFragment"></th:block>
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
 
 <div class="main">
     <section class="module">
         <div class="container">
             <div class="row">
+
             </div>
-            <section class="module-medium" id="contact">
-                <h1></h1>
-            </section>
-            <h2 style="text-align: center; color: #0C3664;letter-spacing: 4px; font-size: 35px ">회원정보수정</h2>
+            <div class="row">
+
+                <section class="module-medium" id="contact">
+                    <h1></h1>
+
+                </section>
+            </div>
+
+            <br> <h2 style="text-align: center; color: black;letter-spacing: 7px; font-size: 40px ">회원정보수정</h2>
             <br>
             <hr class="divider-w pt-20">
+            <br>
         <form class="joinForm">
             <table class="joinTable">
                 <tr>

@@ -1,14 +1,21 @@
 package com.smart.project.web.home.act;
 
+import com.smart.project.component.CommonCodeComponent;
+import com.smart.project.component.data.CodeObject;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.*;
 
 @Slf4j
 @Controller
 @RequiredArgsConstructor
 public class HomeTestAct3 {
+
+    private final CommonCodeComponent commonCodeComponent;
 
     /* 공통 영역*/
     @RequestMapping("/head")
@@ -123,6 +130,53 @@ public class HomeTestAct3 {
 
     }
 
+    @PostMapping("/test4")
+    @ResponseBody
+    public Map<String, Object> test1(@RequestBody Map param) {
+        Map<String, Object> result = new HashMap<>();
+        String keyData = String.valueOf(param.get("key"));
+        log.error("key===>{}", keyData);
+        String temp = "i,b,k,g,f,h,e,z,j,p,o,n,l,d,c,a,m,q";
+        if (keyData.equals("all")) {
+            keyData = temp;
+            log.error("keyAll==>{}", keyData);
+        }
+
+        String[] key = keyData.split(",");
+
+        List<String> keyList = new ArrayList<>();
+        if (StringUtils.isNotEmpty(keyData)) {
+            keyList = Arrays.asList(keyData.split(","));
+        }
+//        log.error(key+"");
+        log.error(keyList + "");
+
+        List<CodeObject.Code> data = commonCodeComponent.getCodeList("wishLoc");
+
+        if (data != null) {
+            for (CodeObject.Code codeData : data) {
+                String keyArr = keyList.stream().filter(a -> a.equals(codeData.getCode())).findAny().orElse(null);
+                if (StringUtils.isNotEmpty(keyArr)) {
+//                    log.error("keyArr===>{}", keyArr);
+                    codeData.setChecked(true);
+                } else {
+                    codeData.setChecked(false);
+                }
+//                for(int i = 0; i < key.length; i++){
+//                    if(codeData.getCode().equals(key[i])){
+//                        log.error("key===>{}", key[i]);
+//                    }
+//                }
+            }
+//            log.error("{}", data);
+        }
+        result.put("data", data);
+
+
+        return result;
+    }
+
+
     /*========================================================================================*/
 
     /* 관리자 페이지*/
@@ -147,7 +201,10 @@ public class HomeTestAct3 {
 
 
 
-
+    @RequestMapping("portfolio_single_featured_slider2")
+    public String portfolio(){
+        return "portfolio_single_featured_slider2";
+    }
 
 
 
