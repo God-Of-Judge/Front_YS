@@ -73,7 +73,7 @@
                 </video>
                     </div>
                 <div class="col-sm-4">
-                <div class="chart"><canvas  id="pie-chart" ></canvas></div>
+                <div class="chart" style="width:700px; margin-left: -180px"><canvas  id="pie-chart" ></canvas></div>
                     </div>
             </div>
 
@@ -157,11 +157,15 @@
 
     </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>-->
 
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+<!--
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>-->
 <script>
-    new Chart(document.getElementById("pie-chart"), {
+  /*  new Chart(document.getElementById("pie-chart"), {
         type: 'pie',
         data: {
             labels: ["A", "B"],
@@ -170,18 +174,132 @@
                 backgroundColor: [ "#FF9F29","#5D8DFD"],
                 data: [20,80],
             }],
+            /!*datalabels: {
+               align: 'center',
+               anchor: 'center',
+      }*!/
 
         },
         options: {
             title: {
                 display: true,
                 text: '적용과실',
-                fontSize: 15,
+                fontSize: 20,
             },
+            pieceLabel: {
+                mode:"label",
+                position:"outside",
+                fontSize: '18px',
+                fontStyle: 'bold'
+            }
 
         },
 
     });
+*/
+    // Pie Chart ctx Get
+    var PieChart_ctx = document.getElementById('pie-chart').getContext('2d');
+
+    // Pie Chart Config Set
+    PieChart_config = {
+        type: 'pie',
+        data: {
+            labels: ['OPEN', 'PROGRESSING', 'COMPLETE'],
+            data: [13,11,14],
+            datasets: [{
+                label: 'Pie Chart Count',
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1,
+                datalabels: {
+                    labels: {
+                        value: {
+                            borderWidth: 2,
+                            borderRadius: 4,
+                            font: {size: 15},
+                            formatter: function(value, ctx) {
+                                var value = ctx.dataset.data[ctx.dataIndex];
+                                return value > 0 ? Math.round(value / (ctx.dataset.data[0] + ctx.dataset.data[1] + ctx.dataset.data[2]) * 100) + ' %' : null;
+                            },
+                            color: function(ctx) {
+                                var value = ctx.dataset.data[ctx.dataIndex];
+                                return value > 0 ? 'white' : null;
+                            },
+                            backgroundColor:function(ctx) {
+                                var value = ctx.dataset.data[ctx.dataIndex];
+                                return value > 0 ? 'gray' : null;
+                            },
+                            padding: 4
+                        }
+                    }
+                }
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio : false,
+            animation: false,
+            legend: {
+                position: 'left',
+                display: true
+            },
+            title: {
+                display: false,
+                text: 'Pie Chart - Count',
+                font: {
+                    size: 50
+                },
+                fontstyle: 'bold',
+                position: 'top'
+            },
+            plugins: {
+                legend: {
+                    position: 'left',
+                },
+                title: {
+                    display: true,
+                    text: 'Pie Chart - Count',
+                    font: {
+                        size: 25
+                    }
+                }
+            }
+        }
+    };
+
+
+    // Pie Chart Create
+    var PieChart = new Chart(PieChart_ctx, PieChart_config);
+
+    // Pie Chart Event Set
+    document.getElementById("cPieChart").onclick = function(evt) {
+
+        var activePoints = PieChart.getElementsAtEvent(evt);
+
+        if(activePoints.length > 0)
+        {
+            //get the internal index of slice in pie chart
+            var clickedElementindex = activePoints[0]["_index"];
+
+            //get specific label by index
+            var label = PieChart.data.labels[clickedElementindex];
+
+            //get value by index
+            var value = PieChart.data.datasets[0].data[clickedElementindex];
+
+            // label and value Process
+
+        }
+    };
+
 
 </script>
 <script src="/resources/assets/lib/jquery/dist/jquery.js"></script>

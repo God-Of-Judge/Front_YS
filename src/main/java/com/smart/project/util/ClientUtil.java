@@ -227,7 +227,7 @@ public class ClientUtil extends ClientUtilParent {
 					inforexAgent.setAppProvider(item[1].equals("a") ? item[6] : "appstore");
 					inforexAgent.setIAppVersion(getAppVersionNumber(inforexAgent));		//예 : 1.5.130 ==> 130 넘겨줌.
 					return inforexAgent;
-			   }).orElse(null);
+				}).orElse(null);
 			}
 		}
 		return null;
@@ -277,22 +277,22 @@ public class ClientUtil extends ClientUtilParent {
 	public static int getAppChannelCode (String appVersion, String pattern) {
 		int iRet = 501;
 		if (StringUtils.isNotEmpty(appVersion)) {
-            List<String> appVersionList = Arrays.asList(appVersion.split(pattern));
-            if(appVersionList != null && appVersionList.size() == 3){
-                String sCode = appVersionList.get(0);	//스토어 구분 코드
-                switch (sCode){
-                    case "1":		//PlayStore
-                        iRet = 501;
-                        break;
-                    case "2":		//OneStore
-                        iRet = 502;
-                        break;
-                    case "6":		//appStore
-                        iRet = 501;
-                        break;
-                }
-            }
-        }
+			List<String> appVersionList = Arrays.asList(appVersion.split(pattern));
+			if(appVersionList != null && appVersionList.size() == 3){
+				String sCode = appVersionList.get(0);	//스토어 구분 코드
+				switch (sCode){
+					case "1":		//PlayStore
+						iRet = 501;
+						break;
+					case "2":		//OneStore
+						iRet = 502;
+						break;
+					case "6":		//appStore
+						iRet = 501;
+						break;
+				}
+			}
+		}
 		return iRet;
 	}
 
@@ -340,7 +340,7 @@ public class ClientUtil extends ClientUtilParent {
 		return iRet;
 	}
 
-    // 2019.12.09 Raccoon : ClientUtilParent에 있는 항목을 오버 라이드 하였다.
+	// 2019.12.09 Raccoon : ClientUtilParent에 있는 항목을 오버 라이드 하였다.
 	public static boolean isCompany(HttpServletRequest request) {
 		String clientIp = getClientIP(request);
 		// 세정아울렛 사무실
@@ -571,11 +571,13 @@ public class ClientUtil extends ClientUtilParent {
 //		cookieKeylist.add("EMP_NO");
 		try {
 			Cookie[] cookies = request.getCookies();
-			for (int i = 0; i < cookies.length; i++) {
-				for(String sCookieKey : cookieKeylist){
-					if (cookies[i].getName().equals(sCookieKey)) {
-						if (!cookies[i].getValue().equals("")) {
-							resultMap.put(sCookieKey, cookies[i].getValue());
+			if (cookies != null) {
+				for (int i = 0; i < cookies.length; i++) {
+					for (String sCookieKey : cookieKeylist) {
+						if (cookies[i].getName().equals(sCookieKey)) {
+							if (!cookies[i].getValue().equals("")) {
+								resultMap.put(sCookieKey, cookies[i].getValue());
+							}
 						}
 					}
 				}

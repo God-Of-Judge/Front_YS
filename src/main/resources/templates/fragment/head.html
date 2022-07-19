@@ -39,27 +39,27 @@
 
 <th:block th:fragment="headFragment">
 
-<style>
-    /* modal position(center)*/
-    .modal {
-        text-align: center;
-        width: 26%;
-        height: 500px;
-        margin-top: 13%;
-        margin-left: 35%;
-    }
-    @media screen and (min-width: 768px) {
-        .modal:before {
-            display: inline-block;
-            vertical-align: middle;
-            content: " ";
+    <style>
+        /* modal position(center)*/
+        .modal {
+            text-align: center;
+            width: 26%;
+            height: 500px;
+            margin-top: 13%;
+            margin-left: 35%;
         }
-    }
-    .modal-dialog {
-        display: inline-block;
-        text-align: center;
-        vertical-align: middle;
-    }
+        @media screen and (min-width: 768px) {
+            .modal:before {
+                display: inline-block;
+                vertical-align: middle;
+                content: " ";
+            }
+        }
+        .modal-dialog {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+        }
 
 
         .navbar-fixed-bottom, .navbar-fixed-top{
@@ -74,23 +74,23 @@
             font-style: normal;
         }
 
-    @font-face {
-        font-family: 'SEBANG_Gothic_Bold';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
+        @font-face {
+            font-family: 'SEBANG_Gothic_Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-    @font-face {
-        font-family: 'SEBANG_Gothic_Regular';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
+        @font-face {
+            font-family: 'SEBANG_Gothic_Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 
- h1, h2, h3, h4{
-     font-family: 'SEBANG_Gothic_Regular',serif;
- }
+        h1, h2, h3, h4{
+            font-family: 'SEBANG_Gothic_Regular',serif;
+        }
 
         a{
             font-family: 'SEBANG_Gothic_Bold',serif;
@@ -99,24 +99,24 @@
         ul li a{
             font-size: 20px;
         }
-    body,.main{
-        padding-right: 0 !important;
-    }
-    .modal-open { padding-right: 0px !important; }
-    .modal { padding-right: 0px !important; }
+        body,.main{
+            padding-right: 0 !important;
+        }
+        .modal-open { padding-right: 0px !important; }
+        .modal { padding-right: 0px !important; }
 
 
-</style>
+    </style>
 
-  <!--  <body class="homepage is-preload">
-    <div id="page-wrapper">-->
+    <!--  <body class="homepage is-preload">
+      <div id="page-wrapper">-->
     <nav class="navbar navbar-custom navbar-transparent navbar-fixed-top one-page" role="navigation">
         <div class="container">
 
-               <div class="collapse navbar-collapse" id="custom-collapse" style="margin-top: 10px; margin-bottom: 20px">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="main">판별의신</a>
-            </div>
+            <div class="collapse navbar-collapse" id="custom-collapse" style="margin-top: 10px; margin-bottom: 20px">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="main">판별의신</a>
+                </div>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="service">서비스</a></li>
                     <li><a href="upload">영상업로드</a></li>
@@ -127,10 +127,10 @@
                             <li><a href="join_edit">회원정보수정</a></li>
                         </ul>
                     </li>
-                    <li><a data-toggle="modal" href="#loginModal"> | 로그인</a></li>
-                    <li class="hidden"><a > | 로그아웃</a></li>
+                    <li th:if="${#request.getCookies()== null}"><a data-toggle="modal" href="#loginModal"> | 로그인</a></li>
+                    <li th:if="${#request.getCookies()!= null}"><a th:href="@{/logout}"> | 로그아웃</a></li>
                 </ul>
-        </div>
+            </div>
         </div>
     </nav>
     </div>
@@ -156,13 +156,13 @@
         </li>
     </ul>
 
-        <script src="/resources/vendors/polyfill.min.js"></script>
-        <script src="/resources/vendors/jquery.min.js"></script>
-        <script src="/resources/vendors/lodash.min.js"></script>
-        <script src="/resources/vendors/axios.min.js"></script>
-        <script src="/resources/vendors/moment.min.js"></script>
-        <script src="/resources/vendors/jquery-mobile.event.min.js"></script>
-        <script type="text/javascript" th:src="${@versionComponent.getVersion('/resources/build/onLoad.bundle.js')}"></script>
+    <script src="/resources/vendors/polyfill.min.js"></script>
+    <script src="/resources/vendors/jquery.min.js"></script>
+    <script src="/resources/vendors/lodash.min.js"></script>
+    <script src="/resources/vendors/axios.min.js"></script>
+    <script src="/resources/vendors/moment.min.js"></script>
+    <script src="/resources/vendors/jquery-mobile.event.min.js"></script>
+    <script type="text/javascript" th:src="${@versionComponent.getVersion('/resources/build/onLoad.bundle.js')}"></script>
     </body>
 </th:block>
 </html>
