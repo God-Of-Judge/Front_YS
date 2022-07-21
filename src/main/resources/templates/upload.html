@@ -117,18 +117,25 @@
         color: black;
     }
 
-    .time{
-        padding: 10px 25px 10px;
+
+    .hour,.minute, .second{
+        width: 70px;
+    }
+    td a{
+        font-family: sans-serif;
     }
 
+    input[type=checkbox] {
+        -webkit-transform: scale(2.5); /* Safari and Chrome */
+        padding: 10px;
+
+    }
 
 </style>
 
 <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60" style="background-color: #f9f9f9">
 
 <th:block th:replace="fragment/head :: headFragment"></th:block>
-
-<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60" style="background-color: #f9f9f9">
 
 <div class="main" style="background-color: #f9f9f9">
     <section class="module">
@@ -143,6 +150,7 @@
                     <hr class="divider-w pt-20">
                     <div class="row" >
                     <!--이미지 파일 첨부-->
+                        <form>
                         <pre id="file">
                             <br>
                             <br>
@@ -153,56 +161,84 @@
                                     <input id="input_p" type="file" name="file" >
                                 </div>
                         </pre>
-                        <form>
+
                         <table>
                             <tr>
                                 <th colspan="2" style="font-size: 30px"> 사고시점 입력</th>
                             </tr>
+
                             <tr>
-                                <td>
-                                    <div class="btn_slct_area">
-                                        <ul>
-                                            <li><a type="hidden" name="locWantKey" id="locWantKey"></a></li>
-                                            <li><a type="hidden" name="locWant" id="locWant"></a></li>
-                                        </ul>
-                                    </div>
+                                <td style="padding-left: 150px;">
+                                    <input class="hour" list="list" type="text"/>
+                                    <datalist id ="list">
+                                        <SCRIPT language="JavaScript">
+                                            for(i=0;i<=12;i++)
+                                            {
+                                                if (i<10){
+                                                    document.write("<option value=0"+i+">");
+                                                }
+                                                else{
+                                                    document.write("<option value="+i+">");
+                                                }
+
+                                            }
+                                        </SCRIPT>
+                                    </datalist>
+                                    <span> 시 </span>
+                                    <input class="minute" list="list2" type="text"/>
+                                    <datalist id ="list2">
+                                        <SCRIPT language="JavaScript">
+                                            for(i=0;i<=60;i++)
+                                            {
+                                                if (i<10){
+                                                    document.write("<option value=0"+i+" size='5'>");
+                                                }
+                                                else{
+                                                    document.write("<option value="+i+">");
+                                                }
+
+                                            }
+                                        </SCRIPT>
+                                    </datalist>
+                                    <span> 분 </span>
+                                    <input class="second" list="list2" type="text"/>
+                                    <spana> 초  &nbsp; ~ &nbsp;</spana>
+                                    <input class="hour" list="list" type="text"/><span> 시 </span>
+                                    <input class="minute" list="list2" type="text"/><span> 분 </span>
+                                    <input class="second" list="list2" type="text"/> <span> 초 </span>
                                 </td>
-                                <div class="normal_pop_wrap want_loc hidden">
-                                </div>
-                                <td><input class="time" type="time" style="margin-left: 200px" step="1"/><a class="font-alt"> ~ </a> <input class="time" type="time" step="1"/></td>
+
+
                                 <td>영상전체&nbsp;&nbsp;<input type="checkbox" ></td>
                             </tr>
                         </table>
-                    </form>
                         <div style="text-align: center;">
                             <br>
                             <br>
                         <button class="btn btn-b btn-round" type="submit"  style=" width: 300px;height: 60px"><a class="font-alt" href="write" style="color: white;font-size: 25px">업로드</a></button>&nbsp
                         </div>
+                        </form>
                     </div>
             </div>
-
-        </div>
-
-
         </div>
     </section>
-
-
 </main>
 
 <script>
-    $(document).ready(function () {
+    $('input.timepicker').hover( function () {
         $('input.timepicker').timepicker({
+            step:2,
+            showSecond: true,
             timeFormat: 'HH:mm:ss',
-            interval: 1,
-            startTime: '00:00:00',
+            /*interval: 0.1,*/
+            startTime: '00:00',
             dynamic: false,
             dropdown: true,
             scrollbar: true
-        });
+        })
     })
 </script>
+
 
 <script>
     const uploadModal = document.querySelector('upload_modal');

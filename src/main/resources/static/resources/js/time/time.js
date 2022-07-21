@@ -49,6 +49,8 @@ export class Join
                     }
                 })
 
+
+                // 완료 클릭 시 key를 넘겨줌
                 $('.btn_complete').on('click', (e)=>{
                     let selectedKeyArray = new Array();
                     $('.hope_list > li').each((idx, obj)=>{
@@ -67,6 +69,7 @@ export class Join
                     $('.want_loc').empty().addClass('hidden');
                 });
 
+                // 초기화 버튼
                 $('.btn_reset').on('click', (e)=>{
                     $('.hope_list > li').each((idx, obj)=>{
                         let $obj = $(obj).children('a');

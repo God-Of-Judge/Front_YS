@@ -136,7 +136,7 @@ public class HomeTestAct3 {
         Map<String, Object> result = new HashMap<>();
         String keyData = String.valueOf(param.get("key"));
         log.error("key===>{}", keyData);
-        String temp = "i,b,k,g,f,h,e,z,j,p,o,n,l,d,c,a,m,q";
+        String temp = "h00,h01,h02,h03,h04,h05,h06,h07,h08,h09,h10,h11,h12";
         if (keyData.equals("all")) {
             keyData = temp;
             log.error("keyAll==>{}", keyData);
@@ -151,7 +151,7 @@ public class HomeTestAct3 {
 //        log.error(key+"");
         log.error(keyList + "");
 
-        List<CodeObject.Code> data = commonCodeComponent.getCodeList("time");
+        List<CodeObject.Code> data = commonCodeComponent.getCodeList("hour");
 
         if (data != null) {
             for (CodeObject.Code codeData : data) {
