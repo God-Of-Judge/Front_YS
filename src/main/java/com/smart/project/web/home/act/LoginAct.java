@@ -7,6 +7,7 @@ import com.smart.project.web.home.vo.MemberVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -23,6 +24,18 @@ import java.util.List;
 public class LoginAct {
     private final MemberService ms;
     public final Test test;
+
+    @RequestMapping("/joinComplete")
+    public String joinComplete(@ModelAttribute MemberVO vo){
+        if (vo != null) {
+            int cnt = test.joinComplete(vo);
+            log.error("join 성공 ==>{}", cnt + "");
+
+            return "redirect:/main";
+        } else{
+            return "redirect:/join";
+        }
+    }
 
     @RequestMapping("/loginComplete")
     public String loginComplete(MemberVO vo, HttpServletResponse res) throws IOException {

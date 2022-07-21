@@ -130,52 +130,6 @@ public class HomeTestAct3 {
 
     }
 
-    @PostMapping("/test4")
-    @ResponseBody
-    public Map<String, Object> test1(@RequestBody Map param) {
-        Map<String, Object> result = new HashMap<>();
-        String keyData = String.valueOf(param.get("key"));
-        log.error("key===>{}", keyData);
-        String temp = "h00,h01,h02,h03,h04,h05,h06,h07,h08,h09,h10,h11,h12";
-        if (keyData.equals("all")) {
-            keyData = temp;
-            log.error("keyAll==>{}", keyData);
-        }
-
-        String[] key = keyData.split(",");
-
-        List<String> keyList = new ArrayList<>();
-        if (StringUtils.isNotEmpty(keyData)) {
-            keyList = Arrays.asList(keyData.split(","));
-        }
-//        log.error(key+"");
-        log.error(keyList + "");
-
-        List<CodeObject.Code> data = commonCodeComponent.getCodeList("hour");
-
-        if (data != null) {
-            for (CodeObject.Code codeData : data) {
-                String keyArr = keyList.stream().filter(a -> a.equals(codeData.getCode())).findAny().orElse(null);
-                if (StringUtils.isNotEmpty(keyArr)) {
-//                    log.error("keyArr===>{}", keyArr);
-                    codeData.setChecked(true);
-                } else {
-                    codeData.setChecked(false);
-                }
-//                for(int i = 0; i < key.length; i++){
-//                    if(codeData.getCode().equals(key[i])){
-//                        log.error("key===>{}", key[i]);
-//                    }
-//                }
-            }
-//            log.error("{}", data);
-        }
-        result.put("data", data);
-
-
-        return result;
-    }
-
 
     /*========================================================================================*/
 

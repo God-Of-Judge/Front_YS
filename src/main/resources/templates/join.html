@@ -163,32 +163,32 @@
                                 </section>
                                 <h2 style="text-align: center; color: black;letter-spacing: 7px; font-size: 45px ">회원가입</h2>
                                 <hr class="divider-w pt-20" style="margin-top: 30px"  >
-        <form class="joinForm">
+        <form class="joinForm" action="joinComplete" method="post">
             <table class="joinTable">
                 <tr>
                     <td><label for="user_id">아이디</label></td>
-                    <td class="td_long"><input type="text" id="user_id" class="textForm" placeholder="아이디를 입력하세요" required
+                    <td class="td_long"><input type="text" id="user_id" name="mbId" class="textForm" placeholder="아이디를 입력하세요" required
                                                autofocus>
                     <td><button type="submit" class="btn btn-b btn-round">중복확인</button></td></td>
                 </tr>
                 <tr>
                     <td><label for="user_pwd">비밀번호</label></td>
-                    <td><input type="password" id="user_pwd" class="textForm" placeholder="비밀번호를 입력하세요"></td>
+                    <td><input type="password" id="user_pwd" name="mbPw" class="textForm" placeholder="비밀번호를 입력하세요"></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td><label for="user_tel">전화번호</label></td>
-                    <td><input type="tel" id="user_tel" class="textForm" placeholder="전화번호를 입력하세요"></td>
+                    <td><input type="tel" id="user_tel" name="mbPhone" class="textForm" placeholder="전화번호를 입력하세요"></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td><label for="user_name">닉네임</label></td>
-                    <td><input type="text" id="user_name" class="textForm" placeholder="닉네임을 입력하세요"</td>
+                    <td><input type="text" id="user_name" name="mbNick" class="textForm" placeholder="닉네임을 입력하세요"</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td> <button type="submit" class="btn btn-b btn-round" style="width:100%">회원가입</button></td>
+                    <td> <input type="submit" class="btn btn-b btn-round" style="width:100%">회원가입</input></td>
                 </tr>
 
             </table>

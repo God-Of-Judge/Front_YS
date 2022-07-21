@@ -1,15 +1,8 @@
 package com.smart.project.proc;
 
 import com.smart.project.annotation.Master;
-import com.smart.project.common.vo.MenuVO;
-import com.smart.project.web.home.vo.JoinVO;
 import com.smart.project.web.home.vo.MemberVO;
-import com.smart.project.web.home.vo.StudyTestVO;
-import com.smart.project.web.home.vo.TestVO;
-import org.apache.ibatis.annotations.SelectProvider;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @Master
 @Component
@@ -21,6 +14,8 @@ public interface Test {
 	 * @변경이력 :
 	 **********************************************************************************************/
 	MemberVO login(MemberVO vo);
+
+	int joinComplete(MemberVO vo);
 
 
 }
