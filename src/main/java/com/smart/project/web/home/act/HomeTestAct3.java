@@ -151,7 +151,7 @@ public class HomeTestAct3 {
 //        log.error(key+"");
         log.error(keyList + "");
 
-        List<CodeObject.Code> data = commonCodeComponent.getCodeList("wishLoc");
+        List<CodeObject.Code> data = commonCodeComponent.getCodeList("time");
 
         if (data != null) {
             for (CodeObject.Code codeData : data) {

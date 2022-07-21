@@ -40,114 +40,129 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
-    <style>
-    #join_wrap {
-        width: 800px;
-        margin: 200px;
-    }
-
-    #join_wrap .title{
-        padding: 50px 0 20px;
-        font-size: 2em;
-    }
-    .joinTable th, joinTable td {
-        padding: 0px;
-        box-sizing: border-box;
-        border-bottom: 1px solid #ddd;
-        border-radius: 5px;
-    }
-
-    .joinTable th {
-        text-align: center;
-        background-color: #cccccc;
-        width: 100px;
-
-    }
-
-    .joinTable .textForm {
-        width: 300px;
-        height: 30px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        padding: 0 10px;
-        box-sizing: border-box;
-
-    }
-
-
-    .joinTable textarea {
-        /*width: 420px;*/
-        height: 80px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    .joinTable {
-        text-align: center;
-        margin: 13px -70px 40px 0px;
-    }
-
-    .btn_area button {
-        width: 150px;
-        height: 50px;
-        margin: 0 10px;
-        border: 0;
-        font-size: 20px;
-        position: static;
-        bottom: auto;
-        border-radius: 5px;
-    }
-
-    h2 {
-        text-align: center;
-        margin-top: 200px;
-    }
-
-    body {
-        text-align: -webkit-center;
-
-    }
-
-    section {
-        margin-top: -100px;
-        line-height: 80px;
-    }
-
-    input {
-        display: block;
-        width: 500px;
-    }
-
-
-    tr>td {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-</style>
-
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
 </head>
-<body>
-<th:block th:replace="fragment/head :: headFragment"></th:block>
+    <style>
+        #join_wrap {
+            width: 800px;
+            margin: 200px;
+        }
 
-<div class="main">
+        #join_wrap .title{
+            padding: 50px 0 20px;
+            font-size: 2em;
+        }
+        .joinTable th, joinTable td {
+            padding: 0px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .joinTable th {
+            text-align: center;
+            background-color: #cccccc;
+            width: 100px;
+
+        }
+
+        .joinTable .textForm {
+            width: 300px;
+            height: 30px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 0 10px;
+            box-sizing: border-box;
+
+        }
+
+
+        .joinTable textarea {
+            /*width: 420px;*/
+            height: 80px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .joinTable {
+            text-align: center;
+            margin: 13px -70px 40px 0px;
+        }
+
+        .btn_area button {
+            width: 150px;
+            height: 50px;
+            margin: 0 10px;
+            border: 0;
+            font-size: 20px;
+            position: static;
+            bottom: auto;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        body {
+            text-align: -webkit-center;
+
+        }
+
+        section {
+            margin-top: -100px;
+            line-height: 80px;
+        }
+
+        input {
+            display: block;
+            width: 500px;
+        }
+
+
+        tr>td {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+    </style>
+<!--
+
+<th:block th:replace="fragment/head :: headFragment"></th:block>
+<body data-spy="scroll" data-target=".onpage-navigation" data-offset="60" style="background-color: #f9f9f9">
+
+<main class="main" style="background-color: #f9f9f9">
     <section class="module">
         <div class="container">
             <div class="row">
-            </div>
-            <section class="module-medium" id="contact">
-                <h1></h1>
-            </section>
-            <h2 style="text-align: center; color: black;letter-spacing: 7px; font-size: 35px ">회원가입</h2>
-            <br>
-            <hr class="divider-w pt-20">
+                <div>
+                    <div class="row" >
+                        <section class="module-medium" id="contact">
+                            <h1></h1>
+                        </section>
+                    </div>
+                    <h2 style="text-align: center; color: black;letter-spacing: 7px; font-size: 45px ">회원가입</h2>
+            <hr class="divider-w pt-20"  style="margin-top: 30px">
+-->
 
+                    <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+
+                    <th:block th:replace="fragment/head :: headFragment"></th:block>
+
+                    <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60" >
+
+                    <div class="main" >
+                        <section class="module">
+                            <div class="container">
+                                <div class="row">
+                                </div>
+                                <section class="module-medium" id="contact">
+                                    <h1></h1>
+                                </section>
+                                <h2 style="text-align: center; color: black;letter-spacing: 7px; font-size: 45px ">회원가입</h2>
+                                <hr class="divider-w pt-20" style="margin-top: 30px"  >
         <form class="joinForm">
             <table class="joinTable">
                 <tr>
@@ -184,6 +199,9 @@
             </div>
 </section>
     </main>
+
+
+<!--    JavaScripts    -->
 <script src="/resources/assets/lib/jquery/dist/jquery.js"></script>
 <script src="/resources/assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/resources/assets/lib/wow/dist/wow.js"></script>

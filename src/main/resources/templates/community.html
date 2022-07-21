@@ -58,30 +58,52 @@
   .modal-open { padding-right: 0px !important; }
   .modal { padding-right: 0px !important; }
 
+  p{
+    font-size: 15px;
+  }
+  @media screen and (max-width: 400px) {
 
+    .module-title a{
+      font-size: 0.4em !important;
+      margin-top: -10rem;
+      color: white;
+    }
+    .home-section{
+      background-size: contain;
+      display: inline-flex ;
+    }
+
+    h2{
+      font-size: 3em !important;
+      margin-top: -10rem;
+      color: white;
+    }
+    nav{
+      display: none;
+    }
+
+  }
 
 </style>
 
-<th:block th:replace="fragment/head :: headFragment"></th:block>
+
 <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
 
-      <main class="main" style="background-color: #f9f9f9">
-        <section class="module">
-          <div class="container">
-            <div class="row">
-<div>
-  <div class="row" style="background-color: #f9f9f9">
+<th:block th:replace="fragment/head :: headFragment"></th:block>
 
-  <section class="module-medium" id="contact">
-    <h1></h1>
 
-  </section>
-</div>
-  <h2 style="text-align: center; color: black;letter-spacing: 7px; font-size: 45px ">커뮤니티</h2>
-  <br>
-  <br>
-  <hr class="divider-w pt-20">
-  <div class="row" style="background-color: #f9f9f9">
+<div class="main" style="background-color: #f9f9f9">
+  <section class="module">
+    <div class="container">
+      <div class="row">
+      </div>
+      <section class="module-medium" id="contact">
+        <h1></h1>
+      </section>
+      <h2 style="text-align: center; color: black;letter-spacing: 7px; font-size: 45px ">커뮤니티</h2>
+      <br>
+      <hr class="divider-w pt-20">
+  <div  style="background-color: #f9f9f9">
 
             <div class="row multi-columns-row post-columns" style="background-color: #f9f9f9">
               <div class="col-sm-6 col-md-3 col-lg-3">

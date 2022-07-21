@@ -41,9 +41,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-
     <style>
-
 
 
       body,.main{
@@ -67,6 +65,41 @@
         padding: 0 !important;
       }
 
+      @media screen and (max-width: 400px) {
+          nav{
+              display: none;
+          }
+          .row {
+              margin-top: 300px;
+              display: flex !important;
+          }
+          .module-title a{
+              font-size: 0.4em !important;
+              margin-top: -10rem;
+              color: white;
+          }
+
+          .home-section{
+              background-image:url("/resources/assets/images/mobile.png");
+              background-size: cover;
+              display: inline-flex ;
+              background-repeat:no-repeat;
+          }
+
+
+      }
+      @media screen and (min-width: 500px){
+          .home-section{
+              background-image:url("/resources/assets/images/main__.png");
+              background-size: cover;
+              display: inline-flex ;
+              background-repeat:no-repeat;
+          }
+
+      }
+
+
+
 
     </style>
 
@@ -75,7 +108,8 @@
   <body  data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
   <th:block th:replace="fragment/head :: headFragment"></th:block>
 <div class="main">
-  <section class="home-section home-parallax home-fade home-full-height bg-dark-60 agency-page-header" id="home" data-background="/resources/assets/images/main2.png">
+    <!--home-parallax home-fade home-full-height bg-dark-60 agency-page-header-->
+  <section class="home-section home-parallax home-fade home-full-height" id="home" >
         <div class="titan-caption">
           <div class="caption-content">
               <div class="module-medium">
@@ -91,11 +125,12 @@
                   </div>
                   <div class="col-md-4 col-sm-6 col-xs-8">
                           <div class="content-box-image"><img src="/resources/assets/images/myPage3.png" /></div>
-                          <h4 style="margin-top:-21%;;margin-left: 5%" class="module-title font-alt"><a href="myList" style="font-size: 20px">서비스안내</a></h4>
+                          <h4 style="margin-top:-21%;;margin-left: 5%" class="module-title font-alt"><a href="service" style="font-size: 20px">서비스안내</a></h4>
                   </div>
               </div>
               </div>
               </div>
+        </div>
         </div>
   </section>
 
