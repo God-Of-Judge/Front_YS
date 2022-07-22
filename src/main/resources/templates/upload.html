@@ -153,6 +153,7 @@
 
                     <!--이미지 파일 첨부-->
                         <form action="http://localhost:5000/uploadFlask" method="post" enctype = "multipart/form-data">
+                        <form>
                         <pre id="file">
                             <br>
                             <img src="/resources/assets/images/file.png" style="margin-left: -150px"/>
@@ -207,8 +208,6 @@
                                     <input class="minute" list="list2" type="text"/><span> 분 </span>
                                     <input class="second" list="list2" type="text"/> <span> 초 </span>
                                 </td>
-
-
                                 <td>영상전체&nbsp;&nbsp;<input type="checkbox" ></td>
                             </tr>
                         </table>
@@ -220,7 +219,6 @@
                         </form>
                     </div>
             </div>
-        </div>
     </section>
 </main>
 
@@ -252,8 +250,6 @@
     btnClose.addEventListener('click', () => {
         uploadModal.style.display = 'none';
     });
-
-
 </script>
 
 
