@@ -1,5 +1,6 @@
 package com.smart.project.web.home.act;
 
+import com.mysql.cj.Session;
 import com.smart.project.proc.Test;
 import com.smart.project.util.CookieUtil;
 import com.smart.project.web.home.biz.MemberService;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -92,10 +94,11 @@ public class LoginAct {
     }
 
     @RequestMapping("/kakaoLogin")
-    public String kakaoLogin(@RequestParam("code") String code, HttpServletResponse res) throws Exception {
+    public String kakaoLogin(@RequestParam("code") String code, HttpServletResponse res, HttpSession session) throws Exception {
         CookieUtil.createCookie(res, "id", "kakao");
         log.error("token==>{}", code);
         String access_Token = ms.getAccessToken(code);
+        session.setAttribute("token", access_Token);
         log.error("token2==>{}", access_Token);
 
         HashMap<String, Object> userInfo = ms.getUserInfo(access_Token);

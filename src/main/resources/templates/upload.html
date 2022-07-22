@@ -152,13 +152,14 @@
                     <div class="row" >
 
                     <!--이미지 파일 첨부-->
-                        <form action="http://localhost:5000/uploadFlask" method="post" enctype = "multipart/form-data">
+                        <form action="http://115.23.24.218:5000/uploadFlask" method="post" enctype = "multipart/form-data">
                         <pre id="file">
                             <br>
                             <img src="/resources/assets/images/file.png" style="margin-left: -150px"/>
                                <p>파일을 업로드해주세요</p>
                                 <div style="margin-left: 450px; font-size: 20px; height: 100px">
                                     <input id="input_p" type="file" name="file" >
+                                    <input type="hidden" name="token" th:value="${token}">
                                 </div>
                         </pre>
 
