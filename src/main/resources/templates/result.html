@@ -9,10 +9,18 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/resources/assets/images/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <!-- Template specific stylesheets-->
+    <link href="/resources/assets/lib/animate.css/animate.css" rel="stylesheet">
+    <link href="/resources/assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
+    <link href="/resources/assets/lib/flexslider/flexslider.css" rel="stylesheet">
+    <link href="/resources/assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="/resources/assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
+    <link href="/resources/assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
+
     <link href="/resources/assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
     <link href="/resources/assets/lib/animate.css/animate.css" rel="stylesheet">
     <link href="/resources/assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="/resources/assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
@@ -31,12 +39,21 @@
         margin-left: 100px;
     }
 
-    .video{
+    video{
+        width: 500px;
+        height: 300px;
         text-aglin:center;
         display:inline-block;
     }
-    .result{
+    .chart{
+        margin-top: 60px;
+        width:700px;
+        margin-left: -100px;
         display:inline-block;
+    }
+
+    a{
+        text-transform:none !important;
     }
 
 
@@ -49,6 +66,15 @@
         font-size: 20px;
     }
 
+    .col-sm-4{
+        margin-left: 8%;
+    }
+
+    button a{
+        color: white;
+    }
+
+
     @media screen and (max-width: 400px) {
 
         h2{
@@ -57,9 +83,15 @@
             color: white;
         }
 
-        nav{
-            display: none;
+        .video{
+            width: 100%;
+            height: 100%;
         }
+
+        .row{
+            margin-left: -20px;
+        }
+
 
     }
 
@@ -73,8 +105,7 @@
 <div class="main">
     <section class="module">
         <div class="container">
-            <div class="row">
-            </div>
+
                 <section class="module-medium" id="contact">
                     <h1></h1>
                 </section>
@@ -83,14 +114,14 @@
             <hr class="divider-w pt-20">
 
             <div class="row">
-                <div class="col-sm-4" style="margin-top: 10%; margin-left: 10%">
-                <video width="100%" height="100%" controls>
+                <div class="col-sm-4" style="margin-top: 10%;">
+                <video controls>
                     <source  src="/resources/assets/images/accident.mp4" type="video/mp4">
                 이 브라우저에서 지원하지 않는 영상입니다.
                 </video>
                     </div>
                 <div class="col-sm-4">
-                <div class="chart" style="width:700px; margin-left: -180px"><canvas  id="pie-chart" ></canvas></div>
+                <div class="chart" ><canvas  id="pie-chart" ></canvas></div>
                     </div>
             </div>
 
@@ -140,7 +171,7 @@
                                         <div class="panel-body">
                                             <p style="color: black">청구차량 30% : 피청구차량 70%</p>
                                             <a class="font-alt">◆ 심의접수번호 2016-020301</a><br><a class="font-alt">주간에 신호등 있는 사거리교차로에서 청구차량 우측에서 황색신호에 직진 중, 피청구차량 좌측에서 적색신호에 직진하다가 피청구차량의 전면부와 청구차량의 좌측후면부가 충돌한 사고. 피청구차량 적색신호에 진입한 점, 파손부위 등 감안</a>
-                                            <span style="float: right"><a class="btn btn-g btn-round" style="color: black">판례링크</a></span>
+                                            <span style="float: right"><a class="btn btn-g btn-round font-alt" style="color: black;font-size: 15px;font-weight: 700">판례링크</a></span>
                                         </div>
                                     </div>
                                 </div>
@@ -152,6 +183,7 @@
                                         <div class="panel-body">
                                             <p style="color: black">청구차량 30% : 피청구차량 70%</p>
                                             <a class="font-alt">◆ 심의접수번호 2016-021767 </a><br><a class="font-alt">주간에 신호등 있는 사거리교차로에서 청구차량 좌측에서 황색 점멸신호에 직진 중, 피청구차량 우측에서 적색 점멸신호에 직진하다가 피청구차량의 좌측면과 청구차량의 전면부가 충돌한 사고. 피청구차량 적색 점멸신호에 진행한 점 감안</a>
+                                            <span style="float: right"><a class="btn btn-g btn-round font-alt" style="color: black;font-size: 15px;font-weight: 700">판례링크</a></span>
                                         </div>
                                     </div>
                                 </div>
@@ -163,10 +195,10 @@
     </div>
     <div style="text-align: center;">
     <a>
-        <button class="btn btn-b btn-round" type="submit" style="height: 45px; font-size: 23px; margin-right: 30px;padding-bottom:40px">뒤로가기</button>
+        <button class="btn btn-b btn-round" type="submit" style="height: 45px; font-size: 23px; margin-right: 30px;padding-bottom:40px"><a class="font-alt" href="myList">뒤로가기</a></button>
     </a>
     <a>
-        <button class="btn btn-b btn-round" type="submit" style="height: 45px; font-size: 23px;padding-bottom:40px">공유하기</button>
+        <button class="btn btn-b btn-round" type="submit" style="height: 45px; font-size: 23px;padding-bottom:40px"><a class="font-alt" href="write">공유하기</a></button>
     </a>
     </div>
 </section>
@@ -192,8 +224,8 @@
                 backgroundColor: [ "#EB6361","#008BCD"],
                 data: [30,70],
                 datalabels:{
-                        color:'black',
-                        font:{size:30},
+                        color:'white',
+                        font:{size:40, weight:700},
                     }
             }],
             /*datalabels: {
