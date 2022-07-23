@@ -130,6 +130,69 @@
         padding: 10px;
 
     }
+    td{
+        padding-left: 150px;
+    }
+
+
+    .fileUpload{
+        margin-left: 450px;
+        font-size: 20px;
+        height: 100px
+    }
+
+    @media screen and (max-width: 400px) {
+        nav {
+            display: none;
+        }
+        h2{
+            font-size: 3em !important;
+            margin-top: -10rem;
+            color: white;
+        }
+
+        .row {
+            display: flex !important;
+        }
+
+        .module-title a {
+            font-size: 0.4em !important;
+            margin-top: -10rem;
+            color: white;
+        }
+
+        .fileUpload {
+            margin-left: 450px;
+            font-size: 20px;
+            height: 100px
+        }
+
+        form{
+            margin: 0 5px;
+        }
+        pre{
+            width: 370px;
+        }
+
+        td{
+            padding: 0 0px 0 0 ;
+        }
+
+        #input_p{
+            margin-left: -400px
+        }
+        span{
+            font-size: 0.65em !important;
+        }
+        input[type=checkbox] {
+
+            -webkit-transform: scale(1.5); /* Safari and Chrome */
+            padding: 10px;
+
+        }
+
+    }
+
 
 </style>
 
@@ -154,9 +217,9 @@
                         <form action="http://115.23.24.218:5000/uploadFlask" method="post" enctype = "multipart/form-data" id="Form">
                         <pre id="file">
                             <br>
-                            <img src="/resources/assets/images/file.png" style="margin-left: -150px"/>
+                            <img src="/resources/assets/images/file.png" style="margin-left: -200px"/>
                                <p>파일을 업로드해주세요</p>
-                                <div style="margin-left: 450px; font-size: 20px; height: 100px">
+                                <div class="fileUpload">
                                     <input id="input_p" type="file" name="file" >
                                     <input type="hidden" name="token" th:value="${token}">
                                 </div>
@@ -168,7 +231,7 @@
                             </tr>
 
                             <tr>
-                                <td style="padding-left: 150px;">
+                                <td>
                                     <input class="hour" list="list" type="text"/>
                                     <datalist id ="list">
                                         <SCRIPT language="JavaScript">
@@ -202,20 +265,20 @@
                                     </datalist>
                                     <span> 분 </span>
                                     <input class="second" list="list2" type="text"/>
-                                    <spana> 초  &nbsp; ~ &nbsp;</spana>
+                                    <span> 초  &nbsp; ~ &nbsp;</span>
                                     <input class="hour" list="list" type="text"/><span> 시 </span>
                                     <input class="minute" list="list2" type="text"/><span> 분 </span>
                                     <input class="second" list="list2" type="text"/> <span> 초 </span>
                                 </td>
 
 
-                                <td>영상전체&nbsp;&nbsp;<input type="checkbox" ></td>
+                                <td><span>영상전체&nbsp;&nbsp;</span><input type="checkbox" ></td>
                             </tr>
                         </table>
                         <div style="text-align: center;">
                             <br>
                             <br>
-                        <input type="button" id="saveBtn" class="btn btn-b btn-round" data-toggle="modal" href="#uploadingModal" style="color: white;font-size: 25px" value="업로드">
+                        <input type="button" id="saveBtn" class="btn btn-b btn-round" data-toggle="modal" href="#uploadingModal" style="color: white;font-size: 25px" value="제출">
                         </div>
                         </form>
                     </div>
