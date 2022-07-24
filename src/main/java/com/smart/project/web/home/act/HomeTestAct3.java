@@ -99,6 +99,11 @@ public class HomeTestAct3 {
 
     }
 
+    @RequestMapping("/result2")
+    public void result2(){
+
+    }
+
     // 회원정보수정
     @RequestMapping("/join_edit")
     public void join_edit(){

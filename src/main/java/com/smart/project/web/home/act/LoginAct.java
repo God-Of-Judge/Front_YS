@@ -64,7 +64,7 @@ public class LoginAct {
     public String logout(HttpServletRequest request, HttpServletResponse response){
 
         Cookie[] cookies = request.getCookies();
-        if (cookies.length > 0) {
+        if (cookies.length > 0 && cookies != null) {
             if (cookies[0].getValue().equals("kakao")){
                 if(cookies != null){ // 쿠키가 한개라도 있으면 실행
 
@@ -90,7 +90,7 @@ public class LoginAct {
 
     @RequestMapping("/kakao")
     public String kakao(){
-        return "redirect:https://kauth.kakao.com/oauth/authorize?client_id=d063d1ad6b1c07a4bd10a0c8fa990556&redirect_uri=http://localhost/kakaoLogin&response_type=code";
+        return "redirect:https://kauth.kakao.com/oauth/authorize?client_id=d063d1ad6b1c07a4bd10a0c8fa990556&redirect_uri=http://115.23.24.218/kakaoLogin&response_type=code";
     }
 
     @RequestMapping("/kakaoLogin")
@@ -113,7 +113,7 @@ public class LoginAct {
     @RequestMapping("/kakaoLogout")
     public String kakaoLogout(){
 
-        return "redirect:https://kauth.kakao.com/oauth/logout?client_id=d063d1ad6b1c07a4bd10a0c8fa990556&logout_redirect_uri=http://localhost/main";
+        return "redirect:https://kauth.kakao.com/oauth/logout?client_id=d063d1ad6b1c07a4bd10a0c8fa990556&logout_redirect_uri=http://115.23.24.218/main";
 
     }
 
