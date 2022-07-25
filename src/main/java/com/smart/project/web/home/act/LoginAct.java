@@ -68,10 +68,10 @@ public class LoginAct {
             if (cookies[0].getValue().equals("kakao")){
                 // 쿠키가 한개라도 있으면 실행
 
-                    for(int i=0; i< cookies.length; i++){
-                        cookies[i].setMaxAge(0); // 유효시간을 0으로 설정
-                        response.addCookie(cookies[i]); // 응답 헤더에 추가
-                    }
+                for(int i=0; i< cookies.length; i++){
+                    cookies[i].setMaxAge(0); // 유효시간을 0으로 설정
+                    response.addCookie(cookies[i]); // 응답 헤더에 추가
+                }
                 return "redirect:kakaoLogout";
             }
 
